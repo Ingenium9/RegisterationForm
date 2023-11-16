@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container{
+    width: 400px;
+    text-align: center;
+}
+#form{
+    width: 400px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 30px;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+#form button{
+    color: white;
+    background-color: aqua;
+    border: 1px solid azure;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 75%;
+    margin: 20px 0px;
+    padding: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input-group input{
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.input-group input:focus{
+    outline: 0;
+}
+.input-group .error{
+    color: black;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.input-group.success input{
+    border-color: gold;
+}
+.input-group.error input{
+    border-color: green;
+}
