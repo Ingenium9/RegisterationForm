@@ -1,27 +1,31 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,500;1,400&display=swap');
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
-.container{
+
+.container {
     width: 400px;
+    position: relative;
+    background: white;
+    padding: 60px 40px;
     text-align: center;
 }
-#form{
-    width: 400px;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    padding: 30px;
-}
-h1{
+
+h1 {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     color: black;
 }
-#form button{
+
+#form button {
     color: white;
-    background-color: aqua;
-    border: 1px solid azure;
+    background-color: blue;
     border-radius: 8px;
     cursor: pointer;
     font-size: 20px;
@@ -30,29 +34,64 @@ h1{
     padding: 10px;
 }
 
-.input-group{
+.input-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    position: relative;
 }
-.input-group input{
+
+.input-group input {
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5px;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid silver;
+    padding-left: 15px;
+    outline: none;
+    transition: 0.4s;
 }
-.input-group input:focus{
-    outline: 0;
+
+.input-group:focus-within label {
+    /*top: 5px;*/
+    /*font-size: 14px;*/
+    /*color: blue;*/
+    background-color: white;
 }
-.input-group .error{
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: grey;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.input-group .error {
     color: black;
     font-size: 16px;
     margin-top: 5px;
 }
-.input-group.success input{
+
+.input-group.success input {
     border-color: gold;
 }
-.input-group.error input{
+
+.input-group.error input {
     border-color: green;
+}
+
+
+.input-group label.moved {
+    transform: translateY(-32px);
+    font-size: 14px;
+    color: blue;
+    background: white;
+}
+
+.input-group input.color-change{
+    border-color: blue;
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
-    <title>Registeration Form</title>
+    <title>Registration Form</title>
 </head>
 
 <body>
@@ -15,25 +15,28 @@
             <h1>Register</h1>
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" />
+                <input type="text" id="username" name="username" required/>
                 <div class="error"></div>
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" />
+                <input type="email" id="email" name="email" required/>
                 <div class="error"></div>
             </div>
             <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="pass" name="pass" />
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="pass" required/>
                 <div class="error"></div>
             </div>
             <div class="input-group">
                 <label for="cpass">Confirm Password</label>
-                <input type="text" id="cpass" name="cpass" />
+                <input type="password" id="cpass" name="cpass" required/>
                 <div class="error"></div>
             </div>
-            <button type="submit" class="reg-button">Register</button>
+            <div class="button">
+                <div class="inner"></div>
+                <button type="submit">Register</button>
+            </div>
         </form>
     </div>
 </body>
