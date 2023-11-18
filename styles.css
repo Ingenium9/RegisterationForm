@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Poppins:ital,wght@0,500;1,400&display=swap');
 
 body {
     display: flex;
@@ -43,6 +43,7 @@ h1 {
 
 #form button {
     color: white;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     background: linear-gradient(to right,rgb(217, 152, 226), #78cfc1, #807ed3);
     border: none;
@@ -99,7 +100,11 @@ h1 {
     border: 1px solid silver;
     padding-left: 15px;
     outline: none;
-    transition: 0.4s;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.input-group input:focus{
+    border: 1px solid blue;
 }
 
 .input-group:focus-within label {
@@ -120,6 +125,24 @@ h1 {
     transition: 0.3s;
 }
 
+.input-group span.show{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: #111;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    visibility: hidden;
+}
+
+.input-group span.visible{
+    visibility: visible;
+}
+
 .input-group .error {
     color: black;
     font-size: 16px;
@@ -133,7 +156,6 @@ h1 {
 .input-group.error input {
     border-color: green;
 }
-
 
 .input-group label.moved {
     transform: translateY(-32px);
