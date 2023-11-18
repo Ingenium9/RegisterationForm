@@ -7,15 +7,33 @@ body {
     height: 100vh;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(45deg, #625fff, rgb(118, 19, 133), #00977e);
+    background-size: 400% 400%;
+    animation: gradientAnimation 25s infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .container {
     width: 400px;
     position: relative;
-    background: white;
+    background: whitesmoke;
     padding: 60px 40px;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(241, 240, 240, 0.955);
 }
+
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -25,13 +43,45 @@ h1 {
 
 #form button {
     color: white;
-    background-color: blue;
-    border-radius: 8px;
+    font-weight: bold;
+    background: linear-gradient(to right,rgb(217, 152, 226), #78cfc1, #807ed3);
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
     width: 75%;
     margin: 20px 0px;
     padding: 10px;
+    background-size: 200% 100%;
+    animation: buttonAnimation 10s infinite;
+}
+
+@keyframes  buttonAnimation{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#form button:hover{
+    background: linear-gradient(to right,rgb(179, 129, 186), #6dccbc, #706ed1);
+    animation: hoverAnimation 2s infinite;
+}
+@keyframes hoverAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 
 .input-group {
