@@ -83,8 +83,9 @@ function sendMail(){
 
     emailjs.send(serviceID, templateID, params)
     .then( res => {
-        /*alert("Email sent Successfully!");*/
+        alert("Email sent Successfully!");
         console.log("Email sent response:", res);
+        location.reload();
     })
     .catch(error => {
         console.error("Email could not be sent:", error);
