@@ -108,11 +108,11 @@ h1 {
 }
 
 .input-group:focus-within label {
-    background-color: white;
+    background-color: whitesmoke;
     transform: translateY(-32px);
     font-size: 14px;
     color: blue;
-    background: white;
+    background: linear-gradient(to bottom, whitesmoke 50%, white 50%);
 }
 
 .input-group label {
@@ -162,7 +162,7 @@ h1 {
     transform: translateY(-32px);
     font-size: 14px;
     color: blue;
-    background: white;
+    background: whitesmoke;
 }
 
 .input-group input.color-change{

